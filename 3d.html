@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotate Transform with Perspective</title>
+    <style>
+        .container {
+            perspective: 1000px; /* Adds 3D perspective to the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            transform: rotate3d(1, 1, 0, 45deg); /* 3D rotation using rotate3d */
+            transition: transform 1s;
+        }
+        
+        .box:hover {
+            transform: rotate3d(0, 0, 0, 0deg); /* Reset to no rotation on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
